@@ -4,7 +4,7 @@
     <div class="container">
         <h1>{{ $conference->title }}</h1>
         <p>{{ $conference->description }}</p>
-        <p><strong>Date:</strong> {{ $conference->date }}</p>
+        <p><strong>Date <i class="fa-solid fa-calendar-days"></i> :</strong> {{ $conference->date }}</p>
         <p><strong>Address:</strong> {{ $conference->address }}</p>
 
         <form action="{{ route('conferences.destroy', $conference->id) }}" method="POST" style="display: inline;">

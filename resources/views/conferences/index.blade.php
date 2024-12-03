@@ -2,12 +2,17 @@
 
 @section('content')
     <div class="container">
-        <h1>Conferences</h1>
+        <div class = "container d-flex justify-content-center align-items-center mt-0">
+            <i class="fas fa-home fa-2x"></i>
+            <h1>  Conferences</h1>
+        </div>
 
-        @if(Auth::check())
+
+    @if(Auth::check())
             <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                 @csrf
                 <button type="submit" class="btn btn-danger">Logout</button>
+                    <a href="{{ route('conferences.create') }}" class="btn btn-primary">Create New Conference</a>
             </form>
         @else
             <div class="mt-3">
@@ -16,20 +21,15 @@
                 </a>
             </div>
         @endif
-        @if(Auth::check())
-            <a href="{{ route('conferences.create') }}" class="btn btn-primary mt-3">Create New Conference</a>
-        @endif
 
-        @if(auth()->check() && auth()->user()->is_admin)
-            <a href="{{ route('conferences.create') }}" class="btn btn-primary">Create New Conference</a>
-        @endif
+
 
         <div class="list-group mt-3">
             @foreach ($conferences as $conference)
                 <div class="list-group-item">
                     <h5>{{ $conference->title }}</h5>
                     <p>{{ $conference->description }}</p>
-                    <p><strong>Date:</strong> {{ $conference->date }}</p>
+                    <p><strong>Date <i class="fa-solid fa-calendar-days"></i>:</strong> {{ $conference->date }}</p>
                     <p><strong>Address:</strong> {{ $conference->address }}</p>
 
                     <a href="{{ route('conferences.show', $conference->id) }}" class="btn btn-info">View</a>

@@ -14,7 +14,7 @@
                 <textarea class="form-control" id="description" name="description" required></textarea>
             </div>
             <div class="form-group">
-                <label for="date">Conference Date</label>
+                <label for="date">Conference Date <i class="fa-solid fa-calendar-days"></i></label>
                 <input type="date" class="form-control" id="date" name="date" required>
             </div>
             <div class="form-group">
