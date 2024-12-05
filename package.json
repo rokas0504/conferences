@@ -21,6 +21,9 @@
         "bootstrap": "^5.3.3",
         "flatpickr": "^4.6.13",
         "jquery": "^3.7.1",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "pikaday": "^1.8.2",
+        "sweetalert2": "^11.14.5",
+        "toastr": "^2.1.4"
     }
 }

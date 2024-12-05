@@ -16,16 +16,16 @@ class ConferenceSeeder extends Seeder
     {
         DB::table('conferences')->insert([
             [
-                'title' => 'Laravel Conference 2024',
-                'description' => 'A conference for Laravel enthusiasts.',
+                'title' => 'Smokingu susirinkimai',
+                'description' => 'Džentelmenų susirinkimas aptarti aprangą.',
                 'date' => '2024-05-15',
-                'address' => '123 Laravel St, San Francisco, CA',
+                'address' => '123 Kalvarijų g. Vilnius',
             ],
             [
-                'title' => 'Vue.js Summit',
-                'description' => 'Join us for an exciting Vue.js event.',
+                'title' => 'Sodų bendrijų susirinkimas',
+                'description' => 'Susirinkimas aptarti nepradėtų kelių tvarkymo.',
                 'date' => '2024-06-10',
-                'address' => '456 JavaScript Ave, New York, NY',
+                'address' => '42 Kranto g., Velžys',
             ],
         ]);
     }

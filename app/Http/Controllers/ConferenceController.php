@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class ConferenceController extends Controller
 {
-    public function __construct()
+  /*  public function __construct()
     {
-        $this->middleware('auth')->except(['viewAsGuest', 'index']); // Only authenticated users can create, edit, or delete conferences
-    }
+        $this->middleware('auth')->except(['viewAsGuest', 'index']);
+    }*/
     public function viewAsGuest()
     {
         $conferences = Conference::all();

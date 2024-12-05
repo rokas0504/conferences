@@ -10,10 +10,8 @@ Route::resource('conferences', ConferenceController::class);
 
 Route::get('/', function () {
     if (Auth::check()) {
-        // If logged in, redirect to the conference list or dashboard page
         return redirect()->route('conferences.index');
     } else {
-        // If not logged in, redirect to the login page
         return redirect()->route('login');
     }
 });

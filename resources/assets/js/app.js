@@ -1,3 +1,4 @@
 import './bootstrap';
-window.$ = window.jQuery = require('jquery');
+import Swal from 'sweetalert2';
 require('flatpickr');
+
